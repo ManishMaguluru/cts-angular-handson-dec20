@@ -1,0 +1,9 @@
+<p>event-binding works!</p>
+
+<div>
+    <input type="text" #uname> <br/>
+    <input type = "password" #pwd>
+    <button (click) = "handleOnClick(uname.value,pwd.value)">Login</button>
+</div>
+<h2>The username is {{username}} <br/> the password is {{password}}</h2>
+

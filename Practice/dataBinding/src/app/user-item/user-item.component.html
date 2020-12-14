@@ -1,0 +1,11 @@
+<p>user-item works!</p>
+<h1>This is a Parent Component</h1>
+
+<div>
+    <app-user-list [username] = "name"></app-user-list>
+</div>
+
+<div *ngFor = "let item of namesArray">
+    <app-user-list [username] = "item"></app-user-list>
+</div>
+

@@ -1,0 +1,8 @@
+<p>parent-counter works!</p>
+
+<div>
+    <h1>Parent Counter Value: {{size}}</h1>
+    <h2>The username is {{user.firstName}} and age is {{user.Age}}</h2>
+    <app-child-counter (childCounter) = "size =$event"></app-child-counter>
+    <app-child-counter (childUserDetails) = "user = $event"></app-child-counter>
+</div>

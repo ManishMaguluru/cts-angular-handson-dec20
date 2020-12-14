@@ -8,8 +8,8 @@ import { Component} from '@angular/core';
 export class ParentCounterComponent {
 
   name = "Manish"
-  
-  likes : number = undefined;
-  dislikes : number =undefined;
+
+  likes : number = 0;
+  dislikes : number = 0;
 
 }

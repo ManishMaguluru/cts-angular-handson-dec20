@@ -8,8 +8,15 @@ import { Component} from '@angular/core';
 export class ParentCounterComponent {
 
   name = "Manish"
+ 
 
   likes : number = 0;
   dislikes : number = 0;
 
+  clearOnClick()
+  {
+    this.likes = 0;
+    this.dislikes = 0;
+  }
+  
 }

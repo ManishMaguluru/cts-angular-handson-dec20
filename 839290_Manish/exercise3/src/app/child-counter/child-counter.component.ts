@@ -10,6 +10,12 @@ export class ChildCounterComponent  {
   @Input()
   username : String = undefined;
 
+  @Input()
+  LikesAfterClear : number = undefined;
+
+  @Input()
+  DislikesAfterClear : number = undefined;
+
   likes : number = 1;
   dislikes : number = 1;
 
@@ -20,17 +26,24 @@ export class ChildCounterComponent  {
   dislikesCount : EventEmitter<number> = new EventEmitter<number>();
 
   likeOnClick(){
+    if(this.LikesAfterClear==0)
+    {
+      this.likes = 1;
+      this.LikesAfterClear = undefined;
+    }
     this.likesCount.emit(this.likes++);
   }
 
   dislikeOnClick()
   {
+    if(this.DislikesAfterClear==0)
+    {
+      this.dislikes = 1;
+      this.DislikesAfterClear = undefined;
+    }
     this.dislikesCount.emit(this.dislikes++);
   }
 
-  clearOnClick(){
-    this.likesCount.emit(this.likes =0);
-    this.dislikesCount.emit(this.dislikes = 0);
-  }
+  
 
 }
